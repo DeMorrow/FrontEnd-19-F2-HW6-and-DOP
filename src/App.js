@@ -25,9 +25,10 @@ function App() {
       }, ...cartData])
     }
   }
+  
   return (
     <BrowserRouter>
-    <Header />
+    <Header cartData={cartData}/>
 
 
       <Routes>
