@@ -1,0 +1,35 @@
+.detail-img {
+    width: 100%;
+}
+
+button {
+    margin: 20px;
+    width: 100px;
+    height: 80px;
+    font-size: 22px;
+    background-color: black;
+    color: aliceblue;
+    font-family: Gilroy-Bold;
+    z-index: inherit;
+}
+
+button:hover {
+    background-color: white;
+    color: #252525;
+    border: white;
+    transition: .5s;
+    font-family: Gilroy-Bold;
+}
+
+button:active{
+    transform: scale(1.4);
+    transition: 0s;
+}
+
+h4 {
+    font-family: Gilroy-Bold;
+}
+
+.abs {
+    left: 22px;
+}

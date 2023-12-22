@@ -1,0 +1,66 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.card img:hover {
+    object-fit: scale-down;
+    transition: .1s;
+}
+
+.card { 
+    border: 2px solid #252525;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.card p{
+    margin-top: 5px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    font-family: Gilroy-Bold;
+}
+
+.card-bottom button{
+    background-color: #252525;
+    border: 1px solid #252525;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: Gilroy-Bold;
+}
+
+.card-bottom button:hover {
+    background-color: white;
+    color: #252525;
+    border: white;
+    transition: .5s;
+    font-family: Gilroy-Bold;
+}
+
+h2 {
+    font-family: Gilroy-Bold;
+}
+
+p {
+    font-family: Gilroy-Bold;
+    opacity: 0.9;
+}
+
+.card-bottom button:active{
+    transform: scale(1.12);
+    transition: 0s;
+}
+
+.card a{
+    color: #000;
+    text-decoration: none;
+}
