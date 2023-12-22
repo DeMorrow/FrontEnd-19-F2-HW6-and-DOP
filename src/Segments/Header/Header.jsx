@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import axios from 'axios';
 
-const Header = () => {
+const Header = ({cartData}) => {
     const [category, setCategory] = useState([]);
 
     useEffect(() => {
-        axios('https://fakestoreapi.com/products/categories')
+        axios.get('https://fakestoreapi.com/products/categories')
         .then(({data}) => setCategory(data))
     }, [])
     return (
@@ -23,6 +23,12 @@ const Header = () => {
                     }
                     <Link to={'/'}>Home</Link>
                     <Link to={'/cart'}>Cart</Link>
+
+                    {
+                        cartData.map((item) => {
+                            return <Link key={item} to={'/cart'}>Cart {item.count}</Link>
+                        })
+                    }
 
                 </nav>
             </div>
