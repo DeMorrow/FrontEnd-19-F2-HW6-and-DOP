@@ -21,14 +21,16 @@ const Header = ({cartData}) => {
                             return <Link key={item} to={`/category/${item}`}>{item}</Link>
                         })
                     }
-                    <Link to={'/'}>Home</Link>
-                    <Link to={'/cart'}>Cart</Link>
+                   <Link to={'/'}>Home</Link>
+                    { cartData.length === 0
+                    ? <Link to={'/cart'}>Cart</Link>
+                    : <Link  to={'/cart'}>Cart  {
+                        cartData.reduce((acc, rec) => {
+                            return acc + rec.count
+                        }, 0)
+                    }</Link>
+                }
 
-                    {
-                        cartData.map((item) => {
-                            return <Link key={item} to={'/cart'}>Cart {item.count}</Link>
-                        })
-                    }
 
                 </nav>
             </div>
